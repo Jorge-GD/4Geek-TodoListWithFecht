@@ -21,7 +21,7 @@ const ToDo = () => {
 			.then(songsJson => {
 				// Do stuff with the JSON
 
-				setSaveJson(songsJson);
+				setToDo(songsJson);
 			})
 
 			.catch(function(error) {
@@ -30,17 +30,15 @@ const ToDo = () => {
 	}, []);
 
 	useEffect(() => {
-		console.log(saveJson[0]);
 		if (toDo.length < 10) {
 			setToDoMap(
 				toDo.map((inside, ind) => {
 					return (
 						<li id={ind} key={ind.toString()} className="box">
-							{inside}
+							{inside.label}
 							<button
 								onClick={() => {
 									toDoDel(ind);
-									console.log("intento cerrarrrrr");
 								}}>
 								X
 							</button>
@@ -63,7 +61,7 @@ const ToDo = () => {
 	const clearValue = e => {
 		if (e.key == "Enter") {
 			if (e.target.value != "") {
-				setToDo([...toDo, e.target.value]);
+				setToDo([...toDo, { label: e.target.value, done: false }]);
 			}
 			e.target.value = "";
 		}
