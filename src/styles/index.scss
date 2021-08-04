@@ -11,3 +11,159 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+
+h1{
+color: black;
+-webkit-text-stroke: 1px red; /* width and color */
+justify-content: flex-end;
+display: flex;
+}
+
+li{
+color: white;
+
+list-style-type:none;
+padding-left: 1rem;
+padding-right: 1rem;
+margin: 3px;
+
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+ul{
+
+display: flex;
+justify-items: baseline;
+align-content: space-between;
+flex-wrap: wrap;
+padding:0;
+margin-top: 20px;
+
+}
+
+.GlobalBox{
+display: flex;
+flex-direction: column;
+height: fit-content;
+width: 30rem;
+height: 30rem;
+align-items: center;
+background-color: rgb(211, 161, 68);
+border-radius: 10%;
+background-color:transparentize($color: rgb(211, 161, 68), $amount: 0.7);
+margin-top: 5rem;
+
+
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* max-height: 600px; */
+    width: 1000px;
+ background-color: transparent;
+
+    
+}
+
+
+
+
+  
+  :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+
+  
+
+.box{
+
+    width: 150px;
+    height: 100px;
+
+}
+.box:before{
+
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(50px);
+}
+.box:nth-child(1),.box:nth-child(1)::before{
+    background: linear-gradient(135deg, #f403d1, #64b5f6);
+}
+.box:nth-child(2),.box:nth-child(2)::before{
+    background: linear-gradient(135deg, #f12711, #f5af19);
+}
+.box:nth-child(3),.box:nth-child(3)::before{
+    background: linear-gradient(135deg, #00b09b, #96c93d);
+}
+.box:nth-child(4),.box:nth-child(4)::before{
+    background: linear-gradient(135deg, #034ff4, #c3f664);
+}
+.box:nth-child(5),.box:nth-child(5)::before{
+    background: linear-gradient(135deg, #2bf111, #2819f5);
+}
+.box:nth-child(6),.box:nth-child(6)::before{
+    background: linear-gradient(135deg, #3a0707, #dbdfa4);
+}
+.box:nth-child(7),.box:nth-child(7)::before{
+    background: linear-gradient(135deg, #00ff00, #242722);
+}
+.box:nth-child(8),.box:nth-child(8)::before{
+    background: linear-gradient(135deg, #7a11f1, #f5af19);
+}
+.box:nth-child(9),.box:nth-child(9)::before{
+    background: linear-gradient(135deg, #a4b000, #c93d3d);
+}
+
+
+
+html {
+    height: 100%;
+    /* max-height: 600px; */
+    width: 1000px;
+    background-color: hsla(200,40%,30%,.4);
+    background-image:   
+      url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
+      url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+      url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+      url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+      url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+    background-repeat: repeat-x;
+    background-position: 
+      0 20%,
+      0 100%,
+      0 50%,
+      0 100%,
+      0 0;
+    background-size: 
+      2500px,
+      800px,
+      500px 200px,
+      1000px,
+      400px 260px;
+    animation: 50s para infinite linear;
+    }
+  
+  @keyframes para {
+    100% {
+      background-position: 
+        -5000px 20%,
+        -800px 95%,
+        500px 50%,
+        1000px 100%,
+        400px 0;
+      }
+    }
