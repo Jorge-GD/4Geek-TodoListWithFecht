@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 const ToDo = () => {
-	const [saveJson, setSaveJson] = useState({});
 	const [toDo, setToDo] = useState([]);
 	const [toDoMap, setToDoMap] = useState([]);
 
@@ -66,6 +65,24 @@ const ToDo = () => {
 			e.target.value = "";
 		}
 	};
+
+	useEffect(() => {
+		fetch(url, {
+			method: "PUT",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify(toDo)
+		})
+			.then(response => response.json())
+			.then(data => {
+				console.log("Success:", data);
+			})
+			.catch(error => {
+				console.error("Error:", error);
+			});
+	}, [toDo]);
+
 	return (
 		<div className="GlobalBox">
 			<h1>Trash Manager</h1>
