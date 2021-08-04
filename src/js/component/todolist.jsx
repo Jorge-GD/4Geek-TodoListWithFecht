@@ -85,11 +85,11 @@ const ToDo = () => {
 
 	return (
 		<div className="GlobalBox">
-			<h1>Trash Manager</h1>
+			<h1>Task Manager</h1>
 			<div className="InputBox">
 				<input
 					type="text"
-					placeholder="Añade nuevo quehacer"
+					placeholder="Inserta aqui un quehacer"
 					onKeyPress={event => {
 						clearValue(event);
 					}}
