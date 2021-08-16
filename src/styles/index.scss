@@ -151,7 +151,8 @@ body{
     width: 25rem;
     height: 100px;
     background: linear-gradient(135deg, #000000, #fdfdfd);
-    background:transparentize($color: rgb(0, 0, 0), $amount: 0.7);
+    background:transparentize($color: rgb(0, 0, 0), $amount: 0.3);
+    
     
 }
 
